@@ -1,0 +1,741 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:Mentalstatesontology#"
+     xml:base="urn:absolute:Mentalstatesontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-">
+        <rdfs:comment>NDS (needs-driven services) ontology is based on DOLCE-CORE. The ontology aims to represent needs-driven services in Protégé-OWL as a starting point that allows service designers to link needs to services by adopting a means-end reasoning perspective, focusing on citizens’ mental states. We have adopted a mental framework on needs, seeing ‘to need’ as an intentional verb that describes thoughts about entities that play the role of intentional object. Different senses of the term ‘need’ are distinguished and their relation with services is made explicit. Besides needs, the service designer can account for citizens’ mental states of desire about services. OWL engineering by Luca Biccheri with contributions by Daniele Porello and Roberta Ferrario.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- fhkb-a2#about2_arg1_state -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#about2_arg1_state">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Aboutness2"/>
+        <rdfs:range rdf:resource="fhkb-a2#MentalState"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;aboutness2&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- fhkb-a2#about2_arg3_time -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#about2_arg3_time">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Aboutness2"/>
+        <rdfs:range rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;aboutness2&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- fhkb-a2#define -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#define">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Description"/>
+        <rdfs:range rdf:resource="fhkb-a2#Concept"/>
+        <rdfs:comment>The relation between descriptions and concepts that are defined by such descriptions</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- fhkb-a2#has_quality -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#has_quality">
+        <owl:inverseOf rdf:resource="fhkb-a2#inhere"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Particular"/>
+        <rdfs:range rdf:resource="fhkb-a2#IndividualQuality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- fhkb-a2#inhere -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#inhere">
+        <rdfs:domain rdf:resource="fhkb-a2#IndividualQuality"/>
+        <rdfs:range rdf:resource="fhkb-a2#Particular"/>
+        <rdfs:comment>The relation between an individual quality and the particular that is characterized by such quality.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- fhkb-a2#lc_arg1_quality -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#lc_arg1_quality">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Location"/>
+        <rdfs:range rdf:resource="fhkb-a2#IndividualQuality"/>
+        <rdfs:comment>property introduced to reify the ternary relation &apos;location&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- fhkb-a2#lc_arg2_region -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#lc_arg2_region">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Location"/>
+        <rdfs:range rdf:resource="fhkb-a2#Region"/>
+        <rdfs:comment>property introduced to reify the ternary relation &apos;location&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- fhkb-a2#lc_arg3_time -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#lc_arg3_time">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Location"/>
+        <rdfs:range rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;location&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- fhkb-a2#pc_arg1_object -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#pc_arg1_object">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Participation"/>
+        <rdfs:range rdf:resource="fhkb-a2#Object"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;participation&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- fhkb-a2#pc_arg2_event -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#pc_arg2_event">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Participation"/>
+        <rdfs:range rdf:resource="fhkb-a2#Event"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;participation&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- fhkb-a2#pc_arg3_time -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#pc_arg3_time">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Participation"/>
+        <rdfs:range rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;participation&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- fhkb-a2#present_at -->
+
+    <owl:ObjectProperty rdf:about="fhkb-a2#present_at">
+        <rdfs:domain rdf:resource="fhkb-a2#Particular"/>
+        <rdfs:range rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+        <rdfs:comment>The relation is used to state the time at which a particular exists</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about1_arg1_state -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about1_arg1_state">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Aboutness1"/>
+        <rdfs:range rdf:resource="fhkb-a2#MentalState"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;aboutness1&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about1_arg2_concept -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about1_arg2_concept">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Aboutness1"/>
+        <rdfs:range rdf:resource="fhkb-a2#Concept"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;aboutness1&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about1_arg3_time -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about1_arg3_time">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Aboutness1"/>
+        <rdfs:range rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;aboutness1&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about2_arg2_particular -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about2_arg2_particular">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#Aboutness2"/>
+        <rdfs:range rdf:resource="fhkb-a2#Particular"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;aboutness2&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#cf_arg1_particular -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#cf_arg1_particular">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#Classification"/>
+        <rdfs:range rdf:resource="fhkb-a2#Particular"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;classification&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#cf_arg2_concept -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#cf_arg2_concept">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#Classification"/>
+        <rdfs:range rdf:resource="fhkb-a2#Concept"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;classification&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#cf_arg3_time -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#cf_arg3_time">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#Classification"/>
+        <rdfs:range rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+        <rdfs:comment>Property introduced to reify the ternary relation &apos;classification&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#dateOf -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#dateOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- fhkb-a2#Aboutness1 -->
+
+    <owl:Class rdf:about="fhkb-a2#Aboutness1">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#ReifiedRelation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about1_arg1_state"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#MentalState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about1_arg2_concept"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about1_arg3_time"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Aboutness1   is the relation between mental states and concepts (more precisely, those concepts that are intentional contents). Aboutness1 represents the fact that the ‘mental state x is about the concept y at time t’. Instances of the class ‘Aboutness1’ are linked to instances of the classes ‘MentalState’, ‘Concept’, and ‘TimeInterval’ via the functional object properties ‘about1_arg1_state’, ‘about1_arg2_concept’ and ‘about1_arg3_time’ respectively.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#Aboutness2 -->
+
+    <owl:Class rdf:about="fhkb-a2#Aboutness2">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#ReifiedRelation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#about2_arg1_state"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#MentalState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#about2_arg3_time"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#about2_arg2_particular"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Particular"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Aboutness2  is the relation between mentals states and particulars. Aboutness2  represents the fact that the ‘mental state x is About2 the particular y at time t’. Instances of the class ‘Aboutness2‘ are linked to instances of the classes ‘MentalState’, ‘Particular’, and ‘TimeInterval’ via the functional object properties ‘about2_arg1_state’, ‘about2_arg2_particular’ and ‘about2_arg3_time’ respectively</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#AgentivePhysicalObject -->
+
+    <owl:Class rdf:about="fhkb-a2#AgentivePhysicalObject">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Object"/>
+        <rdfs:comment>e.g. a human person</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#Concept -->
+
+    <owl:Class rdf:about="fhkb-a2#Concept">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Particular"/>
+        <owl:disjointWith rdf:resource="fhkb-a2#Event"/>
+        <owl:disjointWith rdf:resource="fhkb-a2#Object"/>
+        <owl:disjointWith rdf:resource="fhkb-a2#Region"/>
+        <rdfs:comment>Concepts are intensional properties. However, in DOLCE-CORE concepts have been &apos;reified&apos; to be able to predicate on them using First-order logic, so they have been treated as &apos;first-class citizens&apos;, i.e. individuals. More specifically, concepts are particulars that are created and accepted by a community of intentional agents and defined by descriptions encoded in linguistic expressions. Concepts can classify different kinds of particulars. For instance, with respect to PA&apos;s services domain, “Providing a child benefit” can be seen as a concept whose description is recorded in PA’s official documents. Each service provision counts as a single event that is classified by the concept defined by the description.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#D1-iGoalState -->
+
+    <owl:Class rdf:about="fhkb-a2#D1-iGoalState">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#DesireState"/>
+        <rdfs:comment>D1-iGoals states are desires that have been selected by an agent to be pursued (i.e goals). More specifically, they represent desires qua instrumental goals whose satisfiers, if realized, create sufficient conditions to achieve the related end goal. For instance, Luigi may desire to meet Carla to talk to her. In the example, Luigi’s mental state of desire is an instrumental goal whose satisfier (i.e. ‘meeting Carla’) represents a sufficient condition to achieve Luigi’s end goal, whose satisfier is ‘talking to Carla’. In any way ‘meeting Carla’ is not a necessary condition to achieve the end goal, in fact, Luigi may just call Carla.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#D2-eGoalState -->
+
+    <owl:Class rdf:about="fhkb-a2#D2-eGoalState">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#DesireState"/>
+        <rdfs:comment>D2-iGoals states are desires that have been selected by an agent to be pursued (i.e goals). More specifically, they represent  desires that are conceived of as end goals, i.e. goals that are pursued per se ( e.g. John desires to become the best soccer player in the world).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#Description -->
+
+    <owl:Class rdf:about="fhkb-a2#Description">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#SocialObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#define"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Descriptions are created, starting at their first encoding in a public language, by communities of intentional agents. Within the domain of PA&apos;s services, public policies can be seen as descriptions that define concepts such as ‘health services’, ‘transport services’, etc</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#DesireState -->
+
+    <owl:Class rdf:about="fhkb-a2#DesireState">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#MentalState"/>
+        <rdfs:comment>e.g. John’s desire to win the election</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#Event -->
+
+    <owl:Class rdf:about="fhkb-a2#Event">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Particular"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#pc_arg1_object"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Participation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#has_quality"/>
+                <owl:allValuesFrom rdf:resource="fhkb-a2#TemporalQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="fhkb-a2#Object"/>
+        <owl:disjointWith rdf:resource="fhkb-a2#Region"/>
+        <rdfs:comment>Events are ‘partially present’, that is at any given time of their existence, some of their proper temporal parts might be not present since such parts were present in the past or will be present in the future. Events are said to ‘happen in time’ (e.g. a symphony, a football match, a university lecture, etc.).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#IndividualQuality -->
+
+    <owl:Class rdf:about="fhkb-a2#IndividualQuality">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Particular"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#inhere"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Particular"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Individual qualities are a subclass of particulars that we can perceive or measure (e.g.color, height, temperature, etc). Individual qualities characterize specific particulars (i.e. two different particulars can not have the same quality). Each quality kind is associated with one or more qualities spaces. Individual qualities have locations in quality spaces, that is they are located in a certain point of such spaces at a certain time (e.g. the shade of red of a particular rose is located at a point x at time t in the color space). Within PA&apos;s service domain, individual qualities are useful to characterize different types of services and agents who take part in the service lifecycle.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#IntentionalContent -->
+
+    <owl:Class rdf:about="fhkb-a2#IntentionalContent">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Role"/>
+        <rdfs:comment>Intentional contents are a kind of mediating entities by which mental states can manage to indirectly refer to objects, provided that such objects exist. Within PA&apos;s services domain, mental states of need are attributed to citizens together with intentional contents of such states. From PA&apos;s perspective, citizens&apos; intentional contents coincide with concepts that express services.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#IntentionalObject -->
+
+    <owl:Class rdf:about="fhkb-a2#IntentionalObject">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Role"/>
+        <rdfs:comment>The role of the intentional object can be played by any particular that satisfy a certain concept. Particulars that satisfy concepts are those objects toward which mental states are about. Within PA&apos;s service domain, a single service provision, classified by the related concept, counts as a particular that plays the role of intentional object with respect to citizens&apos; mental states of need.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#Location -->
+
+    <owl:Class rdf:about="fhkb-a2#Location">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#ReifiedRelation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#lc_arg1_quality"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#IndividualQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#lc_arg2_region"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#lc_arg3_time"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Location is the relation between individual qualities and regions within a quality space. Location represents the fact that the ‘individual quality x is located in the region y at time t’. Instances of the class ‘Location’ are linked to instances of the classes ‘IndividualQuality’, ‘Region’, and ‘TimeInterval’ via the functional object properties ‘lc_arg1_quality’, ‘lc_arg2_region’ and ‘lc_arg3_time’ respectively.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#MentalState -->
+
+    <owl:Class rdf:about="fhkb-a2#MentalState">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#State"/>
+        <rdfs:comment>e.g. beliefs, desires, needs, intentions, hopes, goals, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#N1-iGoalState -->
+
+    <owl:Class rdf:about="fhkb-a2#N1-iGoalState">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#NeedState"/>
+        <rdfs:comment>N1-iGoal states are needs that have been selected by an agent to be pursued (i.e goals). More specifically, they represent those needs qua instrumental goals whose satisfiers, if realized, create sufficient conditions to achieve the end goal (e.g. &apos;Giovanni needs to take the car to go to Rome’ highlights that ‘taking the car’, which is the need’s satisfier, is a sufficient condition to go to Rome. However, ‘taking the car’ is not a necessary condition to achieve Giovanni’s end goal, which is indeed ‘going to Rome’. In fact, Giovanni could decide to go to Rome either by car or by train, that is to say, different satisfiers).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#N2-iGoalState -->
+
+    <owl:Class rdf:about="fhkb-a2#N2-iGoalState">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#NeedState"/>
+        <rdfs:comment>N2-iGoal states are needs that have been selected by an agent to be pursued (i.e goals). More specifically, they represent those needs qua instrumental goals whose satisfiers, if realized, create necessary and sufficient conditions to achieve an end goal ( e.g. ‘Laura needs to hold the Green Card to work and live permanently in the U.S.A’. In this case, ‘holding the Green card’ is the only possible satisfier to reach Laura’s end goal, which is ‘work and live permanently in the U.S.A’).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#NeedState -->
+
+    <owl:Class rdf:about="fhkb-a2#NeedState">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#MentalState"/>
+        <rdfs:comment>e.g. John&apos;s need to receive some additional income</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#NonAgentivePhysicalObject -->
+
+    <owl:Class rdf:about="fhkb-a2#NonAgentivePhysicalObject">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Object"/>
+        <rdfs:comment>e.g.a desk, a house, a vehicle, etc</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#NonPhysicalQuality -->
+
+    <owl:Class rdf:about="fhkb-a2#NonPhysicalQuality">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#IndividualQuality"/>
+        <rdfs:comment>e.g. the value of a building</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#NonPhysicalRegion -->
+
+    <owl:Class rdf:about="fhkb-a2#NonPhysicalRegion">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Region"/>
+        <rdfs:comment>e.g. 20 Euro value</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#Object -->
+
+    <owl:Class rdf:about="fhkb-a2#Object">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Particular"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#pc_arg2_event"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Participation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#has_quality"/>
+                <owl:allValuesFrom rdf:resource="fhkb-a2#PhysicalQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="fhkb-a2#Region"/>
+        <rdfs:comment>Objects are said to be ‘wholly present’, that is all their proper parts are present at any time of their existence (e.g. chairs, trees, persons, cars, etc.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#Participation -->
+
+    <owl:Class rdf:about="fhkb-a2#Participation">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#ReifiedRelation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#pc_arg1_object"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#pc_arg2_event"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#pc_arg3_time"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Participation is the main relation between objects and events and represents the fact that the ‘object x participates in event y at time t’. Instances of the class ‘Participation’ are linked to instances of the classes ‘Object’, ‘Event’, and ‘TimeInterval’ via the functional object properties ‘pc_arg1_object’, ‘pc_arg2_event’ and ‘pc_arg3_time’ respectively.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#Particular -->
+
+    <owl:Class rdf:about="fhkb-a2#Particular">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#present_at"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>DOLCE-CORE is an ontology of temporal particulars or individual, that is its domain or universe of discourse (i.e. the entire range of entities that are assumed to exist) includes only individuals that exist in time. Temporal existence is expressed by the binary predicate PRE (x, t) that stands for ‘the entity x is present at t’. The most basic ontological categories of DOLCE-CORE are six, that is object, event, individual qualitiy, region, concept, and arbitrary sum. Yet, the category arbitrary sum is not represented here since it is not relevant for our modelling purposes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#PhysicalQuality -->
+
+    <owl:Class rdf:about="fhkb-a2#PhysicalQuality">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#IndividualQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#inhere"/>
+                <owl:allValuesFrom rdf:resource="fhkb-a2#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="fhkb-a2#TemporalQuality"/>
+        <rdfs:comment>e.g. being space-located, weight, shape, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#PhysicalRegion -->
+
+    <owl:Class rdf:about="fhkb-a2#PhysicalRegion">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Region"/>
+        <rdfs:comment>e.g. the Euclidean space</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#Region -->
+
+    <owl:Class rdf:about="fhkb-a2#Region">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Particular"/>
+        <rdfs:comment>Regions represent the location of individual qualities that inhere to particulars within a quality space at a certain time. Similar to concepts, regions are created by a community of intentional agents (e.g. the particular ‘x is high 2m at time t’ means that there is a quality y that inhere to x such that y is of the quality kind ‘height’ and y is located in the 2m region within the height quality space at time t).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#ReifiedRelation -->
+
+    <owl:Class rdf:about="fhkb-a2#ReifiedRelation">
+        <rdfs:comment>Due to limitations of the expressivity of OWL language, it is possible to express properties only in the form of binary relations. So to represent n-ary relations (i.e. relations among more than two arguments) that are present within our ontology, following the standard method used in the semantic web community , we have had to reify some properties making them ‘first-class citizens’. So for each n-ary relation, we have created a correspondent class and n new properties meant to represent such relations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#Role -->
+
+    <owl:Class rdf:about="fhkb-a2#Role">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Concept"/>
+        <rdfs:comment>Examples are &apos;being a student&apos;, &apos;being a president&apos; etc. Roles are said to be &apos;founded&apos;, which means, very roughly, that they are thought of in terms of relation to other entities (e.g. being a PhD student implies being enrolled in a university). Furthermore, roles are anti-rigid, that is, they show a dynamic temporal relation with respect to entities by which they are played, in the sense that: a) the same entity could play different roles simultaneously or at different times; b) the same entity could play the same roles several times; c) different entities could play the same role at different times.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#Service -->
+
+    <owl:Class rdf:about="fhkb-a2#Service">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Event"/>
+        <rdfs:comment>Services represent the satisfiers (i.e. whatever has the function of satisfying a need) of citizens&apos; mental states of need. Examples of services are providing a child benefit, releasing a license, providing home care for older adults, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#SocialObject -->
+
+    <owl:Class rdf:about="fhkb-a2#SocialObject">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#NonAgentivePhysicalObject"/>
+        <rdfs:comment>e.g. laws,  agreements, certificates, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#State -->
+
+    <owl:Class rdf:about="fhkb-a2#State">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Event"/>
+        <rdfs:comment>‘Maria&apos;s waiting for a call’ is an example of state. States are homeomeric (i.e. all their temporal parts are described by the very same expression used to refer to the whole event) and cumulative (i.e the mereological sum of two instances of the same event-type maintains the same event-type).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#TemporalQuality -->
+
+    <owl:Class rdf:about="fhkb-a2#TemporalQuality">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#IndividualQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#inhere"/>
+                <owl:allValuesFrom rdf:resource="fhkb-a2#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>e.g. the duration of services</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#TemporalRegion -->
+
+    <owl:Class rdf:about="fhkb-a2#TemporalRegion">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#Region"/>
+        <rdfs:comment>e.g. a date such as ‘14th   January 2021’</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- fhkb-a2#TimeIntervalRegion -->
+
+    <owl:Class rdf:about="fhkb-a2#TimeIntervalRegion">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#TemporalRegion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="fhkb-a2#pc_arg3_time"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Participation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>e. g. one second, minute, hour, day, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#Classification -->
+
+    <owl:Class rdf:about="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#Classification">
+        <rdfs:subClassOf rdf:resource="fhkb-a2#ReifiedRelation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#cf_arg1_particular"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Particular"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#cf_arg2_concept"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Lbiccheri24/NDS-needs-driven-services-ontology-#cf_arg3_time"/>
+                <owl:someValuesFrom rdf:resource="fhkb-a2#TimeIntervalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Classification is the relation between concepts and other particulars. Concepts classify particulars that satisfy all the constraints in the concept definition. Classification represents the fact that the  ‘concept x classifies particular y at time t’. Instances of the class ‘Classification’ are linked to instances of the classes ‘Concept’, ‘Particular’, and ‘TimeInterval’ via the functional object properties ‘cf_arg1_concept’, ‘cf_arg2_particular’ and ‘cf_arg3_time’ respectively</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
